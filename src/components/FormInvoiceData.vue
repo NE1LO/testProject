@@ -2,87 +2,40 @@
   <form @submit.prevent="submitForm">
     <div class="flex gap-[12px]">
       <div class="flex flex-col gap-[12px] w-full">
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Název firmy*"
-          required
+        <InputLabel
+          inputId="companyName"
+          labelText="Název firmy"
+          inputType="text"
         />
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Město*"
-          required
-        />
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="IČ*"
-          required
-        />
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Jméno*"
-          required
-        />
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Telefon*"
-          required
-        />
+        <InputLabel inputId="city" labelText="Město" inputType="text" />
+        <InputLabel inputId="ic" labelText="IČ" inputType="text" />
+        <InputLabel inputId="firstName" labelText="Jméno" inputType="name" />
+        <InputLabel inputId="phone" labelText="Telefon" inputType="tel" />
       </div>
       <div class="flex flex-col gap-[12px] w-full">
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Ulice*"
-          required
-        />
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="PSČ*"
-          required
-        />
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="DIČ*"
-          required
-        />
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Příjmení*"
-          required
-        />
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Email*"
-          required
-        />
+        <InputLabel inputId="street" labelText="Ulice" inputType="text" />
+        <InputLabel inputId="zipcode" labelText="PSČ" inputType="text" />
+        <InputLabel inputId="vat" labelText="DIČ" inputType="text" />
+        <InputLabel inputId="lastName" labelText="Příjmení" inputType="text" />
+        <InputLabel inputId="email" labelText="Email" inputType="email" />
       </div>
     </div>
   </form>
 </template>
 
 <script>
+import InputLabel from "./InputLabel.vue";
+
 export default {
   name: "FormInvoiceData",
-  component: {},
+  components: {
+    InputLabel,
+  },
+  methods: {
+    submitForm() {
+      // Handle form submission logic here
+    },
+  },
 };
 </script>
 

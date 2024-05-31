@@ -2,35 +2,23 @@
   <form @submit.prevent="submitForm">
     <div class="flex gap-[12px]">
       <div class="flex flex-col gap-[12px] w-full">
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Jméno*"
-          required
-        />
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Email*"
-          required
+        <InputLabel inputId="userName" labelText="Jméno" :inputType="'name'" />
+        <InputLabel
+          inputId="userEmail"
+          labelText="Email"
+          :inputType="'email'"
         />
       </div>
       <div class="flex flex-col gap-[12px] w-full">
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Příjmení*"
-          required
+        <InputLabel
+          inputId="userLastName"
+          labelText="Příjmení"
+          :inputType="'text'"
         />
-        <input
-          class="px-[12px] py-[12px] w-full"
-          type="text"
-          id="name"
-          placeholder="Telefon*"
-          required
+        <InputLabel
+          inputId="userPhoneNumber"
+          labelText="Jméno"
+          :Telefon="'tel'"
         />
       </div>
     </div>
@@ -38,8 +26,12 @@
 </template>
 
 <script>
+import InputLabel from "./InputLabel.vue";
 export default {
   name: "FormContacts",
+  components: {
+    InputLabel,
+  },
 };
 </script>
 
