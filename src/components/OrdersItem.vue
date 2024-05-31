@@ -1,6 +1,6 @@
 <template>
   <ul class="w-full">
-    <li class="w-full rounded-2xl bg-white p-6 flex justify-between">
+    <li class="w-full rounded-2xl bg-white p-[8px] lg:p-6 flex justify-between">
       <div class="order-details flex flex-col gap-6">
         <h3 class="font-bold text-lg">Číslo objednávky: 2200245834</h3>
         <div class="order-info flex flex-col">
@@ -16,7 +16,7 @@
             Detail
           </button>
           <button
-            class="text-[14px] lg:text-[16px] btn-repeat text-black px-[10px] py-[10px] lg:px-6 lg:py-3 flex items-center gap-[10px]"
+            class="text-[14px] lg:text-[16px] btn-repeat text-black px-[10px] py-[8px] lg:px-6 lg:py-3 flex items-center gap-[10px]"
           >
             Zopakovat
             <svg class="icon mr-[12px] inline-block" width="16" height="16">

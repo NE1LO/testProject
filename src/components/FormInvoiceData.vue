@@ -31,11 +31,6 @@ export default {
   components: {
     InputLabel,
   },
-  methods: {
-    submitForm() {
-      // Handle form submission logic here
-    },
-  },
 };
 </script>
 
