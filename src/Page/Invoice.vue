@@ -4,17 +4,17 @@
       <thead>
         <tr>
           <th
-            class="text-left leading-4 text-gray-800 tracking-wider sm:text-[12px] lg:text-[16px]"
+            class="text-left leading-4 text-gray-800 tracking-wider text-[12px] lg:text-[16px]"
           >
             Číslo faktury
           </th>
           <th
-            class="text-left leading-4 text-gray-800 tracking-wider sm:text-[12px] lg:text-[16px]"
+            class="text-left leading-4 text-gray-800 tracking-wider text-[12px] lg:text-[16px]"
           >
             Číslo objednávky
           </th>
           <th
-            class="text-left leading-4 text-gray-800 tracking-wider sm:text-[12px] lg:text-[16px]"
+            class="text-left leading-4 text-gray-800 tracking-wider text-[12px] lg:text-[16px]"
           >
             Cena celkem
           </th>

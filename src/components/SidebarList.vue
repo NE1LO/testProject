@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul
-      class="flex flex-col justify-center px-[24px] py-[24px] items-center gap-2 list-none p-0"
+      class="flex flex-col items-center md:items-start justify-center px-[24px] py-[24px] gap-2 list-none p-0"
     >
       <li>
         <router-link
