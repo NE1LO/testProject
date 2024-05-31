@@ -3,13 +3,19 @@
     <table class="min-w-full">
       <thead>
         <tr>
-          <th class="text-left leading-4 text-gray-800 tracking-wider">
+          <th
+            class="text-left leading-4 text-gray-800 tracking-wider sm:text-[12px] lg:text-[16px]"
+          >
             Číslo faktury
           </th>
-          <th class="text-left leading-4 text-gray-800 tracking-wider">
+          <th
+            class="text-left leading-4 text-gray-800 tracking-wider sm:text-[12px] lg:text-[16px]"
+          >
             Číslo objednávky
           </th>
-          <th class="text-left leading-4 text-gray-800 tracking-wider">
+          <th
+            class="text-left leading-4 text-gray-800 tracking-wider sm:text-[12px] lg:text-[16px]"
+          >
             Cena celkem
           </th>
           <th class="text-left leading-4 text-gray-800"></th>
@@ -21,17 +27,30 @@
           :key="index"
           class="hover:bg-gray-100"
         >
-          <td class="invoice-text pt-[38px]">
+          <td
+            class="invoice-text pt-[38px] text-[8px] sm:text-[12px] lg:text-[16px] whitespace-nowrap"
+          >
             {{ invoice.invoiceNumber }}
           </td>
-          <td class="invoice-text pt-[38px]">
+          <td
+            class="invoice-text pt-[38px] text-[8px] sm:text-[12px] lg:text-[16px] whitespace-nowrap"
+          >
             {{ invoice.orderNumber }}
           </td>
-          <td class="invoice-text pt-[38px]" :class="{}">
+          <td
+            class="invoice-text pt-[38px] text-[8px] sm:text-[12px] lg:text-[16px] whitespace-nowrap"
+          >
             {{ invoice.totalPrice }}
           </td>
-          <td class="invoice-text pt-[38px]">
-            <a class="invoice-download-link" href="">Stáhnout</a>
+          <td class="invoice-text pt-[38px] flex justify-center items-center">
+            <a
+              class="flex items-center invoice-download-link text-[10px] sm:text-[14px] lg:text-[16px]"
+              href=""
+            >
+              <svg class="inline-block w-4 h-4 mr-1" width="16" height="16">
+                <use href="../icons/icons.svg#icon-download"></use></svg
+              >Stáhnout
+            </a>
           </td>
         </tr>
       </tbody>
@@ -100,6 +119,7 @@ export default {
 <style>
 .invoice-text {
   color: rgb(115, 115, 115);
+  word-wrap: break-word;
 }
 
 .invoice-download-link {

@@ -5,6 +5,7 @@
     >
       <li>
         <router-link
+          @click="handleLinkClick"
           class="list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
           :to="{ name: 'Orders' }"
         >
@@ -18,6 +19,7 @@
       </li>
       <li>
         <router-link
+          @click="handleLinkClick"
           class="list-item-link h-[54px] rounded-[4px] list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
           :to="{ name: 'Invoice' }"
           ><svg class="icon mr-[12px]" width="16" height="16">
@@ -29,7 +31,7 @@
       </li>
       <li>
         <a
-          class="list-item-link h-[54px] rounded-[4px] list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
+          class="list-item-link pointer-events-none h-[54px] rounded-[4px] list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
           href="#"
           ><svg class="icon mr-[12px]" width="16" height="16">
             <use href="../icons/icons.svg#icon-heart"></use>
@@ -41,7 +43,7 @@
       </li>
       <li>
         <a
-          class="list-item-link h-[54px] rounded-[4px] list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
+          class="list-item-link pointer-events-none h-[54px] rounded-[4px] list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
           href="#"
         >
           <svg class="icon mr-[12px]" width="16" height="16">
@@ -53,7 +55,7 @@
       </li>
       <li>
         <a
-          class="list-item-link h-[54px] rounded-[4px]list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
+          class="list-item-link pointer-events-none h-[54px] rounded-[4px]list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
           href="#"
         >
           <svg class="icon mr-[12px]" width="16" height="16">
@@ -65,6 +67,7 @@
       </li>
       <li>
         <router-link
+          @click="handleLinkClick"
           class="list-item-link h-[54px] rounded-[4px]list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
           :to="{ name: 'Setting' }"
         >
@@ -75,15 +78,18 @@
             <use href="../icons/symbol-defs.svg#icon-rigth"></use></svg
         ></router-link>
       </li>
-      <button
-        class="mr-auto pt-[32px] flex gap-[10px] text-[14px] font-medium transition duration-200 hover:text-red-500"
-      >
-        <svg class="ml-auto" width="16" height="16">
-          <use href="../icons/symbol-defs.svg#icon-exit"></use>
-        </svg>
-        Odhlásit se
-      </button>
-      <li></li>
+
+      <li>
+        <button
+          @click="handleLinkClick"
+          class="mr-auto pt-[32px] flex gap-[10px] text-[14px] font-medium transition duration-200 hover:text-red-500"
+        >
+          <svg class="ml-auto" width="16" height="16">
+            <use href="../icons/symbol-defs.svg#icon-exit"></use>
+          </svg>
+          Odhlásit se
+        </button>
+      </li>
     </ul>
   </nav>
 </template>
@@ -91,6 +97,11 @@
 <script>
 export default {
   name: "SidebarList",
+  methods: {
+    handleLinkClick() {
+      this.$emit("linkClicked");
+    },
+  },
 };
 </script>
 
@@ -112,7 +123,6 @@ export default {
 .pointer-events-none {
   pointer-events: none;
 }
-
-.ggg {
-}
 </style>
+
+<!-- flex flex-col justify-center px-[24px] py-[24px] items-center gap-2 list-none p-0 -->

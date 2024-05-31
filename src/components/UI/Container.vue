@@ -1,5 +1,5 @@
 <template>
-  <div class="my-container">
+  <div class="px-[20px] md:px-[32px] lg:px[64px] mx-auto my-0">
     <slot />
   </div>
 </template>
@@ -10,9 +10,4 @@ export default {
 };
 </script>
 
-<style>
-.my-container {
-  margin: 0 auto;
-  padding: 0 64px;
-}
-</style>
+<style></style>
