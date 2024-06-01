@@ -8,6 +8,7 @@
           @click="handleLinkClick"
           class="list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
           :to="{ name: 'Orders' }"
+          exact-active-class="list-item-link-active"
         >
           <svg class="icon mr-[12px]" width="16" height="16">
             <use href="../icons/symbol-defs.svg#icon-vector-file"></use>
@@ -22,6 +23,7 @@
           @click="handleLinkClick"
           class="list-item-link h-[54px] rounded-[4px] list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
           :to="{ name: 'Invoice' }"
+          exact-active-class="list-item-link-active"
           ><svg class="icon mr-[12px]" width="16" height="16">
             <use href="../icons/icons.svg#icon-file-done"></use></svg
           >Faktury
@@ -70,6 +72,7 @@
           @click="handleLinkClick"
           class="list-item-link h-[54px] rounded-[4px]list-item-link px-[16px] py-[16px] h-[54px] rounded-[4px] flex items-center w-[220px] no-underline p-4 font-inter text-sm font-semibold"
           :to="{ name: 'Setting' }"
+          exact-active-class="list-item-link-active"
         >
           <svg class="icon mr-[12px]" width="16" height="16">
             <use href="../icons/icons.svg#icon-setting"></use></svg
@@ -85,7 +88,7 @@
           class="mr-auto pt-[32px] flex gap-[10px] text-[14px] font-medium transition duration-200 hover:text-red-500"
         >
           <svg class="ml-auto" width="16" height="16">
-            <use href="../icons/symbol-defs.svg#icon-exit"></use>
+            <use href="../icons/icons.svg#icon-exit"></use>
           </svg>
           Odhlásit se
         </button>
@@ -115,6 +118,19 @@ export default {
   background-color: #e2e6ea;
 }
 
+.list-item-link-active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.list-item-link-active:hover {
+  background-color: #3b82f6;
+}
+
+.list-item-link-active .icon {
+  stroke: white;
+}
+
 .icon {
   stroke: black;
   fill: transparent;
@@ -124,5 +140,3 @@ export default {
   pointer-events: none;
 }
 </style>
-
-<!-- flex flex-col justify-center px-[24px] py-[24px] items-center gap-2 list-none p-0 -->

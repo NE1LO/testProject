@@ -1,6 +1,9 @@
 <template>
   <div
     id="sidebar"
+    :class="{
+      'sidebar-hidden': isSidebarVisible,
+    }"
     class="sidebar-block sidebar-hidden flex flex-col h-[100%] bg-white md:rounded-[16px]"
   >
     <button
@@ -24,14 +27,11 @@ export default {
     UserProfile,
   },
   data() {
-    return {};
+    return { isSidebarVisible: true };
   },
   methods: {
     closeSidebar() {
-      const sidebar = document.getElementById("sidebar");
-      if (sidebar) {
-        sidebar.classList.add("sidebar-hidden");
-      }
+      this.isSidebarVisible = !this.isSidebarVisible;
     },
   },
 };
