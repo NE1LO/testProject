@@ -22,11 +22,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr
-          v-for="(invoice, index) in invoices"
-          :key="index"
-          class="hover:bg-gray-100"
-        >
+        <tr v-for="(invoice, index) in invoices" :key="index">
           <td
             class="invoice-text pt-[38px] text-[8px] sm:text-[12px] lg:text-[16px] whitespace-nowrap"
           >
